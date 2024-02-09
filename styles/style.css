@@ -4,7 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background: var(--background-image) no-repeat top center,
     var(--background-color);
-  background-size: auto 768px;
+  background-size: cover  768px;
   background-attachment: fixed;
   color: var(--main-text-color);
 }
@@ -14,7 +14,10 @@
 }
 
 .header {
+  display: grid;
   position: relative;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .header__rec {
@@ -41,20 +44,19 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  margin: -5px -20px 0 0;
+  top: 8px;
+  right: -20px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--rec-color);
   background-color: var(--rec-color);
-  top: 50%;
-  right: 0;
 }
 
-@media (width < 768px) and (width >= 375px) {
+/* @media (width < 768px) and (width >= 375px) {
   .header__theme-menu {
     top: 76px;
     right: 10px;
   }
-}
+} */
 
 .header__theme-menu-list {
   display: flex;
@@ -93,6 +95,7 @@
 
 .header__theme-menu-button:focus {
   border: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -146,9 +149,9 @@
   margin-top: 114px;
   margin-left: 493px;
   margin-bottom: 114px;
-  width: 491px;
-  height: 71px;
-  color: rgb(0, 0, 40);
+  max-width: 491px;
+  max-height: 71px;
+  color: var(--article-title-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -160,9 +163,8 @@
     margin-top: 162px;
     margin-left: 364px;
     margin-bottom: 163px;
-    width: 364px;
-    height: 117px;
-    color: rgb(0, 0, 40);
+    max-width: 364px;
+    max-height: 117px;
     font-size: 18px;
     font-weight: 700;
     line-height: 23.4px;
@@ -174,8 +176,8 @@
     margin-top: 55px;
     margin-left: 0px;
     margin-bottom: 56px;
-    width: 355px;
-    height: 117px;
+    max-width: 355px;
+    max-height: 117px;
   }
 }
 
@@ -261,8 +263,8 @@
 }
 
 .section__title {
-  width: 315px;
-  color: var(--main-text-color);
+  max-width: 315px;
+  color: var(--main-section-title-text-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -282,10 +284,11 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
+  margin-bottom: 10px;
 }
 
 .section__article-text-link {
-  text-shadow: 2px 2px 0px var(--title-shadow);
+  text-shadow: 2px 2px 0px var(--title-decor);
   text-decoration: none;
 }
 
@@ -295,10 +298,11 @@
 
 .section__article-text-link:focus {
   outline: none;
+  text-shadow: 2px 2px 0px var(--title-decor);
 }
 
 .section__article-text-link:focus-visible {
-  outline: 1px solid var(--main-text-color);
+  outline: 1px solid var(--main-article-text-color);
 }
 
 .section__article-list-title {
@@ -331,7 +335,6 @@
 @media (width < 1024px) and (width >= 768px) {
   .section__article-decor {
     display: flex;
-    gap: 20px;
   }
 }
 
@@ -375,8 +378,7 @@ img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
-  display: inline-block;
+  display: block;
 }
 
 .section_gallare {
@@ -410,9 +412,13 @@ img {
 }
 
 .footer {
-  padding: 282px 20px;
+  display: flex;
+  height: 100vh;
+  min-height: 668px;
   position: relative;
   text-align: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer__title {
@@ -426,19 +432,11 @@ img {
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
-
-  .footer {
-    padding: 240px 15px;
-  }
 }
 
 @media (width < 1024px) and (width >= 768px) {
   .footer__title {
     font-size: 120px;
     text-shadow: 2px 2px 0px var(--title-decor);
-  }
-
-  .footer {
-    padding: 435px 20px;
   }
 }

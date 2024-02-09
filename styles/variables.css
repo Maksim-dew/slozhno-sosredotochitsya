@@ -4,12 +4,13 @@
 */
 
 :root {
-  --font-family: "IBM Plex mono";
+  --font-family: "IBM Plex mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-text-color: #f1b2ce;
+    --main-text-color: #ff0070;
+    --main-article-text-color: #ffc2e6;
     --title-color: #db00ff;
     --title-shadow: #ff0070;
     --hover-color: 1px solid rgba(255, 0, 112, 0.4);
@@ -23,7 +24,7 @@
     --link-shadow: var(--title-shadow);
     --rec-color: var(--title-shadow);
   }
-}
+  }
 
 @media (prefers-color-scheme: light) {
   :root {
