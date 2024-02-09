@@ -2,11 +2,12 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-attachment: fixed;
   background: var(--background-image) no-repeat top center,
     var(--background-color);
   background-size: auto 768px;
+  background-attachment: fixed;
   color: var(--main-text-color);
+  height: 100vh;
 }
 
 .decorated-zone {
@@ -15,7 +16,6 @@
 
 .header {
   position: relative;
-  height: 100vh;
 }
 
 .header__rec {
