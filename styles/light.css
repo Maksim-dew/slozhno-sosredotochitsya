@@ -9,6 +9,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-attachment: fixed;
   --main-text-color: #353430;
   --title-color: #ffc2e6;
   --title-shadow: #ff0070;
