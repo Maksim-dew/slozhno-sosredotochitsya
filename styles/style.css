@@ -7,7 +7,6 @@
   background-size: auto 768px;
   background-attachment: fixed;
   color: var(--main-text-color);
-  height: 100vh;
 }
 
 .decorated-zone {
