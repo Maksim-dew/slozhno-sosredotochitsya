@@ -4,4 +4,4 @@
 
 
 
-[https://github.com/StarostinLF/posmotri_v_okno](https://github.com/Maksim-dew/slozhno-sosredotochitsya)https://github.com/Maksim-dew/slozhno-sosredotochitsya
+https://github.com/Maksim-dew/slozhno-sosredotochitsya
