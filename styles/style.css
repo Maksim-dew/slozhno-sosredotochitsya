@@ -199,10 +199,10 @@
     right: 10px;
     top: 10px;
   }
-}
+} 
 
 .section {
-  padding-top: 80px;
+  padding-top: 70px;
   display: grid;
   grid-template-columns: minmax(315px, max-content) minmax(649px, max-content);
   gap: 20px;
@@ -218,7 +218,7 @@
 
 @media (width < 768px) and (width >= 375px) {
   .section {
-    padding-top: 50px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
@@ -230,24 +230,26 @@
   padding-top: 60px;
 }
 
-@media (width < 768px) and (width >= 375px) {
+ @media (width < 768px) and (width >= 375px) {
   .section:first-of-type {
-    padding-top: 38px;
+    padding-top: 40px;
   }
-}
+} 
 
 .section__article {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
+ 
 
 .section__title {
   max-width: 315px;
-  color: var(--main-section-title-text-color);
+  color: var(--title-article-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+  margin-bottom: 10px;
 }
 
 .section__article-title {
@@ -258,6 +260,10 @@
   line-height: 23.4px;
   margin-bottom: 10px;
 }
+
+.section__title:last-of-type {
+  margin-bottom: 0px;
+} 
 
 .section__article-text {
   color: var(--main-article-text-color);
@@ -292,12 +298,19 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+  margin-bottom: 10px;
 }
+
+.title-last {
+  margin-bottom: 0px;
+}
+
 
 .section:nth-of-type(2) {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 @media (width < 768px) and (width >= 375px) {
   .section:nth-of-type(2) {
@@ -305,11 +318,12 @@
     flex-direction: column;
   }
 }
-
-.section__article-decor {
-  display: grid;
-  grid-template-columns: repeat(3, 315px);
-  gap: 20px;
+@media (width >= 1024px){
+  .section__article-decor {
+    display: grid;
+    grid-template-columns: repeat(3, 315px);
+    gap: 20px;
+  }
 }
 
 @media (width < 1024px) and (width >= 768px) {
@@ -318,10 +332,11 @@
   }
 }
 
+
 @media (width < 768px) and (width >= 375px) {
   .section__article-decor {
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
 }
 
@@ -351,6 +366,7 @@
 @media (width < 768px) and (width >= 375px) {
   .section:last-of-type {
     gap: 10px;
+    margin-bottom: 42px;
   }
 }
 
